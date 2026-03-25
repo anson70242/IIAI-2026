@@ -1,0 +1,9 @@
+.env
+*.pth
+*.npy
+checkpoints/
+results/
+*.log
+plots/
+__pycache__/
+*.png

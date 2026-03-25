@@ -1,0 +1,94 @@
+{
+	"Agriculture": {
+		"target_original": "OT",
+		"n_features": 0,
+		"features": {},
+		"description": ""
+	},
+	"Climate": {
+		"target_original": "OT",
+		"n_features": 4,
+		"features": {
+			"f1": "D1",
+			"f2": "D2",
+            "f3": "D3",
+            "f4": "D4"
+		},
+		"description": ""
+	},
+	"Economy": {
+		"target_original": "OT",
+		"n_features": 2,
+		"features": {
+			"f1": "Exports",
+			"f2": "Imports"
+		},
+		"description": ""
+	},
+	"Energy": {
+		"target_original": "OT",
+		"n_features": 8,
+		"features": {
+			"f1": "Weekly East Coast All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)",
+			"f2": "Weekly New England (PADD 1A) All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)",
+            "f3": "Weekly Central Atlantic (PADD 1B) All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)",
+            "f4": "Weekly Lower Atlantic (PADD 1C) All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)",
+            "f5": "Weekly Midwest All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)",
+            "f6": "Weekly Gulf Coast All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)",
+            "f7": "Weekly Rocky Mountain All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)",
+            "f8": "Weekly West Coast All Grades All Formulations Retail Gasoline Prices  (Dollars per Gallon)"
+		},
+		"description": ""
+	},
+	"Environment": {
+		"target_original": "OT",
+		"n_features": 3,
+		"features": {
+			"f1": "Defining Parameter",
+			"f2": "Defining Site",
+            "f3": "Number of Sites Reporting"
+		},
+		"description": ""
+	},
+	"Health_AFR": {
+		"target_original": "OT",
+		"n_features": 0,
+		"features": {},
+		"description": ""
+	},
+	"Health_US": {
+		"target_original": "OT",
+		"n_features": 10,
+		"features": {
+			"f1": "YEAR",
+			"f2": "WEEK",
+            "f3": "% WEIGHTED ILI",
+            "f4": "ILITOTALAGE",
+            "f5": "TOTAL PATIENTS",
+            "f6": "NUM. OF PROVIDERS",
+            "f7": "AGE 0-4",
+            "f8": "AGE 5-24",
+            "f9": "AGE 25-64",
+            "f10": "AGE 65"
+		},
+		"description": ""
+	},
+	"Security": {
+		"target_original": "OT",
+		"n_features": 0,
+		"features": {},
+		"description": ""
+	},
+	"SocialGood": {
+		"target_original": "OT",
+		"n_features": 0,
+		"features": {},
+		"description": ""
+	},
+	"Traffic": {
+		"target_original": "OT",
+		"n_features": 0,
+		"features": {},
+		"description": ""
+	}
+}
