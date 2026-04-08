@@ -14,7 +14,7 @@ class TextProjector(nn.Module):
     forecast horizon shape (Pred_Len * Enc_In) to generate modulation parameters
     like Gamma (scaling) and Beta (shifting).
     """
-    def __init__(self, input_dim, pred_len, enc_in, hidden_dim=512):
+    def __init__(self, input_dim, pred_len, enc_in, hidden_dim=64, dropout=0.5):
         """
         Args:
             input_dim (int): Dimension of the text embedding (e.g., 384 for SBERT).
@@ -26,13 +26,15 @@ class TextProjector(nn.Module):
         self.pred_len = pred_len
         self.enc_in = enc_in
         
-        self.mlp = nn.Sequential(
-            # First projection to hidden space
-            nn.Linear(input_dim, hidden_dim),
-            nn.GELU(),
-            # Final projection to flatten time-series space
-            nn.Linear(hidden_dim, pred_len * enc_in)
-        )
+        self.fc1 = nn.Linear(input_dim, hidden_dim)
+        self.act = nn.GELU()
+        self.drop = nn.Dropout(p=dropout)
+        self.fc2 = nn.Linear(hidden_dim, pred_len * enc_in)
+        
+        nn.init.zeros_(self.fc2.weight)
+        nn.init.zeros_(self.fc2.bias)
+        
+        self.mlp = nn.Sequential(self.fc1, self.act, self.drop, self.fc2)
 
     def forward(self, x):
         """
